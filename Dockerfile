@@ -16,6 +16,8 @@ ENV CONTAINERPILOT_PATH=/etc/containerpilot.json
 COPY containerpilot.json ${CONTAINERPILOT_PATH}
 ENV CONTAINERPILOT=file://${CONTAINERPILOT_PATH}
 
+COPY run.sh /run.sh
+
 ENTRYPOINT ["/bin/containerpilot", "/docker-entrypoint.sh"]
 CMD ["mysqld"]
 
