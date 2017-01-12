@@ -1,6 +1,6 @@
 #!/bin/bash
 
-databases="$(printenv | grep MYSQL_DATABASE | cut -d = -f 2)"
+databases="$(printenv | grep MYSQL_DATABASE_ | cut -d = -f 2)"
 
 set -f 
 
